@@ -1,0 +1,13 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\ReaderController;
+use App\Http\Controllers\BorrowController;
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
+
+Route::resource('books', BookController::class);
+Route::resource('readers', ReaderController::class);
+Route::resource('borrows', BorrowController::class);
