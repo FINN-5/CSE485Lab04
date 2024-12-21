@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use faker\Factory as FakerFactory;
 
-class BocksTablesSeeder extends Seeder
+class BooksTablesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
