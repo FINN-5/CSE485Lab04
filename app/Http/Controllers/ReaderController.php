@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reader;
 use Illuminate\Http\Request;
 
 class ReaderController extends Controller
@@ -11,7 +12,8 @@ class ReaderController extends Controller
      */
     public function index()
     {
-        //
+        $readers = Reader::orderBy('updated_at', 'desc')->paginate(10);
+        return view('readers.index', compact('readers'));
     }
 
     /**
@@ -19,7 +21,7 @@ class ReaderController extends Controller
      */
     public function create()
     {
-        //
+        return view('readers.create');
     }
 
     /**
@@ -27,7 +29,15 @@ class ReaderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'birthday' => 'required|date',
+            'address' => 'required',
+            'phone' => 'required|regex:/^([0-9\\s\\-\\+\\(\\)]*)$/|min:10',
+        ]);
+        
+        Reader::create($validatedData);
+        return redirect('/readers')->with('success', 'Độc giả đã được thêm thành công');
     }
 
     /**
@@ -35,7 +45,8 @@ class ReaderController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $reader = Reader::findOrFail($id);
+        return view('readers.show', compact('reader'));
     }
 
     /**
@@ -43,7 +54,8 @@ class ReaderController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $reader = Reader::findOrFail($id);
+        return view('readers.edit', compact('reader'));
     }
 
     /**
@@ -51,7 +63,15 @@ class ReaderController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'birthday' => 'required|date',
+            'address' => 'required',
+            'phone' => 'required|regex:/^([0-9\\s\\-\\+\\(\\)]*)$/|min:10',
+        ]);
+
+        Reader::whereId($id)->update($validatedData);
+        return redirect('/readers')->with('success', 'Độc giả đã được cập nhật thành công');
     }
 
     /**
@@ -59,6 +79,7 @@ class ReaderController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Reader::destroy($id);
+        return redirect('/readers')->with('success', 'Độc giả đã được xóa thành công');
     }
 }
