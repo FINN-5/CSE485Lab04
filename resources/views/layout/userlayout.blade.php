@@ -46,10 +46,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href=""><i class="bi bi-check-circle"></i>sach 2</a>
                         </li>
-
                     </ul>
-
-
                     <div class="dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-white" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i> @yield('username')
@@ -72,7 +69,6 @@
         @yield('main')
     </main>
 
-
     <footer class="bg-dark text-light py-4">
         <div class="container">
             <div class="row">
@@ -91,7 +87,7 @@
                 <div class="col-md-4">
                     <h5>Thông tin liên hệ</h5>
                     <p><i class="bi bi-geo-alt-fill"></i> 175 Tây Sơn, Hà Nội, Việt Nam</p>
-                    <p><i class="bi bi-envelope-fill"></i> nhom@gmail..com</p>
+                    <p><i class="bi bi-envelope-fill"></i> nhom@gmail.com</p>
                     <p><i class="bi bi-telephone-fill"></i> +84 8</p>
                 </div>
 
@@ -110,7 +106,7 @@
             <hr class="bg-light">
             <!-- Dòng bản quyền -->
             <div class="text-center">
-                <p class="mb-0">&copy; 2024 Công ty Quản lý thu vien. Mọi quyền được bảo lưu.</p>
+                <p class="mb-0">&copy; 2024 Công ty Quản lý thư viện. Mọi quyền được bảo lưu.</p>
             </div>
         </div>
     </footer>
