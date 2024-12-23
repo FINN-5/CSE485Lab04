@@ -34,30 +34,22 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{route('home.index')}}">
-                    <i class="bi bi-book-half"></i> Quản lý thư viện
-                </a>
+                <a class="navbar-brand" href=""><i class="bi bi-house-door-fill"></i> Trang chủ</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('books.index') }}">
-                                <i class="bi bi-book"></i> Quản lý sách
-                            </a>
+                            <a class="nav-link active" href=""><i class="bi bi-list-task"></i> sach 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('readers.index') }}">
-                                <i class="bi bi-people"></i> Quản lý độc giả
-                            </a>
+                            <a class="nav-link" href=""><i class="bi bi-check-circle"></i>sach 2</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('borrows.index') }}">
-                                <i class="bi bi-journal-check"></i> Quản lý mượn trả
-                            </a>
-                        </li>
+
                     </ul>
+
+
                     <div class="dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-white" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i> @yield('username')
@@ -68,14 +60,13 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="">Đăng xuất</a></li>
+                            <li><a class="dropdown-item" href="{{route('logout')}}">Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-
 
     <main>
         @yield('main')
@@ -85,29 +76,29 @@
     <footer class="bg-dark text-light py-4">
         <div class="container">
             <div class="row">
-                <!-- Liên kết nhanh -->
+                <!-- Phần Liên kết nhanh -->
                 <div class="col-md-4">
                     <h5>Liên kết nhanh</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{route('home.index')}}" class="text-light text-decoration-none">Trang chủ</a></li>
-                        <li><a href="{{ route('books.index') }}" class="text-light text-decoration-none">Quản lý sách</a></li>
-                        <li><a href="{{ route('readers.index') }}" class="text-light text-decoration-none">Quản lý độc giả</a></li>
-                        <li><a href="{{ route('borrows.index') }}" class="text-light text-decoration-none">Quản lý mượn trả</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Trang chủ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Nhiệm vụ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Báo cáo</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Hỗ trợ</a></li>
                     </ul>
                 </div>
 
-                <!-- Thông tin liên hệ -->
+                <!-- Phần Thông tin liên hệ -->
                 <div class="col-md-4">
                     <h5>Thông tin liên hệ</h5>
                     <p><i class="bi bi-geo-alt-fill"></i> 175 Tây Sơn, Hà Nội, Việt Nam</p>
-                    <p><i class="bi bi-envelope-fill"></i> support@library.com</p>
-                    <p><i class="bi bi-telephone-fill"></i> +84 123 456 789</p>
+                    <p><i class="bi bi-envelope-fill"></i> nhom@gmail..com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +84 8</p>
                 </div>
 
-                <!-- Giới thiệu -->
+                <!-- Phần Bản quyền -->
                 <div class="col-md-4">
                     <h5>Về chúng tôi</h5>
-                    <p>Hệ thống quản lý thư viện giúp bạn dễ dàng quản lý sách, độc giả và hoạt động mượn trả sách một cách hiệu quả.</p>
+                    <p>Website quản lý nhiệm vụ hiệu quả, hỗ trợ bạn theo dõi và hoàn thành công việc một cách chuyên nghiệp.</p>
                     <div class="social-icons">
                         <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
@@ -117,12 +108,12 @@
             </div>
 
             <hr class="bg-light">
+            <!-- Dòng bản quyền -->
             <div class="text-center">
-                <p class="mb-0">&copy; 2024 Hệ thống quản lý thư viện. Mọi quyền được bảo lưu.</p>
+                <p class="mb-0">&copy; 2024 Công ty Quản lý thu vien. Mọi quyền được bảo lưu.</p>
             </div>
         </div>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
