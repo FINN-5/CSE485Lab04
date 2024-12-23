@@ -2,8 +2,8 @@
 @extends('layout.userlayout')
 @section('title', 'Danh sách Độc giả')
 @section('main')
-<h3 class="text-center text-uppercase text-success my-3">Danh sách Độc giả</h3>
-<a href="{{route('readers.create')}}" class='btn btn-success ms-1'><i class="bi bi-plus-circle"></i> Thêm độc giả mới</a>
+<h3 class="text-center text-uppercase text-primary my-3">Danh sách Độc giả</h3>
+<a href="{{route('readers.create')}}" class='btn btn-primary ms-1'><i class="bi bi-plus-circle"></i> Thêm độc giả mới</a>
 @if (session('success'))
 <div class="container">
     <div class="alert alert-success alert-dismissible" role="alert">
@@ -34,7 +34,7 @@
             <td scope="col">{{ $reader->address }}</td>
             <td scope="col">{{ $reader->phone }}</td>
             <td scope="col" class="d-flex">
-                <a href="{{ route('readers.edit', $reader->id) }}" class="btn btn-success me-1"><i class="bi bi-pencil"></i> Sửa</a>
+                <a href="{{ route('readers.edit', $reader->id) }}" class="btn btn-primary me-1"><i class="bi bi-pencil"></i> Sửa</a>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#{{$reader->id}}">
                     <i class="bi bi-trash3"></i> Xóa
                 </button>
@@ -65,7 +65,7 @@
         @endforeach
     </tbody>
 </table>
-<div class="d-flex justify-content-center ">
-{{ $readers->links('pagination::bootstrap-4', ['class' => 'pagination pagination-sm']) }}
-</div>
+    <div class="d-flex justify-content-center ">
+    {{ $readers->links('pagination::bootstrap-4', ['class' => 'pagination pagination-sm']) }}
+    </div>
 @endsection

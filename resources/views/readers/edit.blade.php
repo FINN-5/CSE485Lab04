@@ -3,7 +3,7 @@
 @section('main')
 
 <div class="container mt-5">
-    <h3 class="text-center text-uppercase text-success my-3">Chỉnh sửa thông tin độc giả</h3>
+    <h3 class="text-center text-uppercase text-primary my-3">Chỉnh sửa thông tin độc giả</h3>
 
     <form method="post" action="{{ route('readers.update', $reader->id) }}">
         @csrf
@@ -25,7 +25,7 @@
             <input type="text" id="phone" name="phone" class="form-control" value="{{ $reader->phone }}" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Cập nhật</button>
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
         <a href="{{ route('readers.index') }}" class="btn btn-secondary">Quay lại danh sách</a>
     </form>
 </div>
