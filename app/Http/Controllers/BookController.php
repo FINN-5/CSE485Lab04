@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 use App\Models\Book;
 
@@ -13,7 +14,9 @@ class BookController extends Controller
     public function index()
     {
         //
-        $books = Book::all();
+
+        $books = Book::orderBy('updated_at', 'desc')->paginate(10);
+
         return view('books.index', compact('books'));
     }
 
@@ -23,6 +26,7 @@ class BookController extends Controller
     public function create()
     {
         //
+        return view('books.create');
     }
 
     /**
@@ -31,6 +35,15 @@ class BookController extends Controller
     public function store(Request $request)
     {
         //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'author' => 'required',
+            'category' => 'required',
+            'year' => 'required|numeric',
+            'quantity' => 'required|numeric',
+        ]);
+        Book::create($validatedData);
+        return redirect('/books')->with('success', 'Sách đã được thêm thành công');
     }
 
     /**
@@ -47,6 +60,8 @@ class BookController extends Controller
     public function edit(string $id)
     {
         //
+        $book = book::find($id);
+        return view('books.update', compact('book'));
     }
 
     /**
@@ -55,6 +70,15 @@ class BookController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'author' => 'required',
+            'category' => 'required',
+            'year' => 'required|numeric',
+            'quantity' => 'required|numeric',
+        ]);
+        Book::whereId($id)->update($validatedData);
+        return redirect('/books')->with('success', 'Sách đã được cập nhật thành công');
     }
 
     /**
@@ -63,5 +87,7 @@ class BookController extends Controller
     public function destroy(string $id)
     {
         //
+        Book::destroy($id);
+        return redirect('/books')->with('success', 'Sách đã được xóa thành công');
     }
 }
