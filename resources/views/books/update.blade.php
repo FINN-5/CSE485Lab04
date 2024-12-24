@@ -3,7 +3,7 @@
 @section('main')
 
 <div class="container mt-5">
-    <h3 class="text-center text-uppercase text-success my-3">Chỉnh sửa thông tin sách</h3>
+    <h3 class="text-center text-uppercase text-primary my-3">Chỉnh sửa thông tin sách</h3>
 
     <form method="post" action="{{route('books.update', $book->id)}}">
         @csrf
@@ -30,7 +30,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-success">Cập nhật</button>
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
         <a href="{{ route('books.index') }}" class='btn btn-secondary'>Quay lại trang chủ</a>
 
 

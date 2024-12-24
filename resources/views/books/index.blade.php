@@ -1,8 +1,8 @@
 @extends('layout.userlayout')
 @section('title', 'Danh sách Sách')
 @section('main')
-<h3 class="text-center text-uppercase text-success my-3">Danh sách Sách</h3>
-<a href="{{route('books.create')}}" class='btn btn-success ms-1'><i class="bi bi-plus-circle"></i> Thêm sách mới mới</a>
+<h3 class="text-center text-uppercase text-primary my-3">Danh sách Sách</h3>
+<a href="{{route('books.create')}}" class='btn btn-primary ms-1'><i class="bi bi-plus-circle"></i> Thêm sách mới</a>
 @if (session('success'))
 <div class="container">
     <div class="alert alert-success  alert-dismissible" role="alert">
@@ -35,7 +35,7 @@
             <td scope="col">{{ $book->year }}</td>
             <td scope="col">{{ $book->quantity }}</td>
             <td scope="col" class="d-flex">
-                <a href="{{ route('books.edit', $book->id) }}" class="btn btn-success me-1"><i class="bi bi-pencil"></i> Sửa</a>
+                <a href="{{ route('books.edit', $book->id) }}" class="btn btn-primary me-1"><i class="bi bi-pencil"></i> Sửa</a>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#{{$book->id}}">
                     <i class="bi bi-trash3"></i> Xóa
                 </button>

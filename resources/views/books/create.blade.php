@@ -3,7 +3,7 @@
 @section('main')
 
 <div class="container mt-5">
-    <h3 class="text-center text-uppercase text-success my-3">Thêm sách mới</h3>
+    <h3 class="text-center text-uppercase text-primary my-3">Thêm sách mới</h3>
 
     <form method="post" action="{{route('books.store')}}">
         @csrf
@@ -29,7 +29,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-success">Lưu</button>
+        <button type="submit" class="btn btn-primary">Lưu</button>
         <a href="{{ route('books.index') }}" class='btn btn-secondary'>Quay lại trang chủ</a>
 
 
