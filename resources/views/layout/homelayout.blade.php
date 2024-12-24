@@ -34,17 +34,17 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{route('tasks.index')}}"><i class="bi bi-house-door-fill"></i> Trang chủ</a>
+                <a class="navbar-brand" href=""><i class="bi bi-house-door-fill"></i> Trang chủ</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{route('tasks.findcompleted',0)}}"><i class="bi bi-list-task"></i> Nhiệm vụ chưa hoàn thành</a>
+                            <a class="nav-link active" href=""><i class="bi bi-list-task"></i> sach</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('tasks.findcompleted',1)}}"><i class="bi bi-check-circle"></i> Nhiệm vụ đã hoàn thành</a>
+                            <a class="nav-link" href=""><i class="bi bi-check-circle"></i>sach</a>
                         </li>
 
                     </ul>
@@ -92,7 +92,7 @@
                     <h5>Thông tin liên hệ</h5>
                     <p><i class="bi bi-geo-alt-fill"></i> 175 Tây Sơn, Hà Nội, Việt Nam</p>
                     <p><i class="bi bi-envelope-fill"></i> nhom@gmail..com</p>
-                    <p><i class="bi bi-telephone-fill"></i> +84 8</p>
+                    <p><i class="bi bi-telephone-fill"></i> +84 </p>
                 </div>
 
                 <!-- Phần Bản quyền -->

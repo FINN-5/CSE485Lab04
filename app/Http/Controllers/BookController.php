@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
+use App\Models\Book;
 
 class BookController extends Controller
 {
@@ -13,7 +14,9 @@ class BookController extends Controller
     public function index()
     {
         //
+
         $books = Book::orderBy('updated_at', 'desc')->paginate(10);
+
         return view('books.index', compact('books'));
     }
 

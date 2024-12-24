@@ -1,3 +1,4 @@
+
 @extends('layout.userlayout')
 @section('title', 'Danh sách Sách')
 @section('main')
@@ -72,3 +73,4 @@
     {{ $books->links() }}
 </div>
 @endsection
+
